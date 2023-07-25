@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua;
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: auto; 
+}
+h2{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+.integer1{
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 10px;
+}
+.operator{
+    height: 30px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+.integer2{
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 10px;
+}
+.btn{
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 10px;
+}
+.table{
+    border: solid 1px;
+    margin-top:40px ;
+}
+.head{
+  
+    border: solid 1px;
+    height: 50px;
+    width: 200px;
+    color: yellow;
+    background-color: black;
+}
+td{
+    border: solid 1px;
+    height: 40px;
+    text-align: center;
+    color: orange;
+    background-color:indigo;
+}

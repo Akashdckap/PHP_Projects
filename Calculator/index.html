@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+        <form action="./index.php" method="post">
+            <input type="number" name="firstnumber" class="integer1">
+            <select name="operator" class="operator">
+                <option value="addition">+</option>
+                <option value="subraction">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+            </select>
+            <input type="number" name="secondnumber" class="integer2">
+            <button class="btn">Submit</button>
+        </form>
+       
+        <table class="table">
+            <th class="head">id</th>
+            <th class="head">firstnumber</th>
+            <th class="head">operator</th>
+            <th class="head">secondnumber</th>
+            <th class="head">result</th>
+            <th class="head">Delete</th>
+            <th class="head">Edit</th>
+
+            <?php foreach($stored as $store): ?>
+            <tr>
+                <td>
+                    <?php echo $store->id ?>
+                </td>
+                <td>
+                    <?php echo $store->first_number ?>
+                </td>
+                <td>
+                    <?php echo $store->symbol ?>
+                </td>
+                <td>
+                    <?php echo $store->second_number ?>
+                </td>
+                <td>
+                    <?php echo $store->result ?>
+                
+                <td>
+                    <form action="delete.php" method="post">
+                        <input hidden type="number" name="delete" value="<?php echo $store->id ?>">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="edit.php" method="post">
+                        <input hidden type="number" name="edit"value="<?php echo $store->id ?>">
+                        <button type="submit">Edit</button>
+                    </form>
+                </td>
+               
+
+            </tr>
+            <?php endforeach; ?>
+        </table>
+
+
+    </div>
+</body>
+
+</html>
